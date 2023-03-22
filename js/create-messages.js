@@ -1,7 +1,10 @@
 "use strict";
 
-const contatos = fetch("http://localhost:8080/contato/0");
 import { convertTZ } from "./convert-timezone.js";
+
+const contatos = await fetch("http://localhost:8080/contato/0").then(
+  (response) => response.json()
+);
 
 export const fazerLoop = function (indice) {
   for (let i = 0; contatos[indice].messages.length > i; i++) {
@@ -34,7 +37,7 @@ export const fazerLoop = function (indice) {
       let messageReceiverContainer = document.createElement("div");
       messageReceiverContainer.classList.add("message-receiver-container");
 
-      if (message.sender == "me") {
+      if (message.sender != "me") {
         if (message.hasOwnProperty("timestamp")) {
           const dataConvertida = convertTZ(
             message.timestamp,

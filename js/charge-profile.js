@@ -2,7 +2,8 @@
 
 import { createMessagesReceiver } from "./create-messages-receiver.js";
 
-export const chargeProfile = async function (contatos) {
+export const chargeProfile = function (contatos) {
+  console.log(contatos);
   const handleClick = function (event) {
     let text = event.currentTarget.innerText.split(`\n`)[0];
 

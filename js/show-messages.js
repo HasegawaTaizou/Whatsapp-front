@@ -2,7 +2,7 @@
 
 import { fazerLoop } from "./create-messages.js";
 
-export const showMessages = async function (contatos) {
+export const showMessages = function (contatos) {
   const handleClick = function (event) {
     const messagesConversationsContainer = document.querySelector(
       ".messages__conversations-container"

@@ -1,6 +1,6 @@
 "use strict";
 
-const contatos = await fetch("http://localhost:8080/contato/0").then(
+const contatos = await fetch("http://localhost:8080/contato/1").then(
   (response) => response.json()
 );
 

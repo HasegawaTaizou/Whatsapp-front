@@ -2,11 +2,11 @@
 
 import { convertTZ } from "./convert-timezone.js";
 
-const contatos = await fetch("http://localhost:8080/contato/0").then(
-  (response) => response.json()
-);
+// const contatos = await fetch("http://localhost:8080/contato/1").then(
+//   (response) => response.json()
+// );
 
-export const fazerLoop = function (indice) {
+export const fazerLoop = function (indice, contatos) {
   for (let i = 0; contatos[indice].messages.length > i; i++) {
     const createMessages = function (message) {
       message = contatos[indice].messages[i];

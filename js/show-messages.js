@@ -16,7 +16,7 @@ export const showMessages = function (contatos) {
 
     messagesConversationsContainer.innerHTML = "";
 
-    fazerLoop(indice);
+    fazerLoop(indice, contatos);
   };
 
   const chats = document.querySelectorAll(".chat");
